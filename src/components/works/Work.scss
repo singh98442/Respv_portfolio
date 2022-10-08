@@ -1,0 +1,72 @@
+@import '../../global.scss';
+
+.work {
+    background-color: lightgreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        .slider{
+            display: flex;
+            // flex-direction: row;
+            // flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            @include mobile{
+                flex-direction: column;
+                margin-top: 5px;
+            }
+
+            .item{
+                display: flex;
+                margin: 1rem 1rem;
+                flex-wrap: wrap;
+                border-radius: 15px;
+                background-color: rgb(105, 76, 82);
+                justify-content: center;
+                align-items: center;
+                padding: 5px 10px;
+
+                @include mobile{
+                    height: 7rem;
+                    width: 10rem;
+                    overflow: hidden;
+                    margin: 5px 2px;
+                }
+
+                img{
+                    height: 20rem;
+                    width: 20rem;
+                    object-fit: contain;
+
+
+                    @include mobile{
+                        height: 5rem;
+                        width: 7rem;
+                    }
+                    
+                }
+                @include mobile{
+                    h1{
+                        font-size: 0.8rem;
+                    }
+                }
+
+
+            }
+
+           
+        }
+
+    }
+}

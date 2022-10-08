@@ -1,0 +1,92 @@
+@import '../../global.scss';
+
+.topbar {
+    background-color: $main-color ;
+    height: 70px;
+    width: 100vw;
+    position: fixed;
+    color: white;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: all 2s ease;
+
+    .topbarWrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        width: 100%;
+
+        .topbarLeft{
+            display: flex;
+            align-items: center;
+            
+            .logo{
+                text-decoration: none;
+                font-size: 40px;
+                font-weight: 700;
+                color: inherit;
+                @include mobile{
+                    font-size: 20px;
+                }
+            }
+            .infoContainer{
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-left: 2rem;
+                .icon{
+                    font-size: 30px;
+                    margin-left: 1rem;
+                }
+                span{
+                    font-size: 20px;
+                }
+                @include mobile{
+                    display: none;
+                }
+               
+
+            }
+        }
+        .topbarRight{
+            .menuIcon{
+                font-size: 2.5rem;
+                cursor: pointer;
+            }
+            .menuIcon1{
+                display: none;
+                font-size: 2.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &.active{
+        background-color: #0b0b0b;
+        color: white;
+        transition: all 2s ease;
+
+        .topbarRight{
+            .menuIcon{
+                display: none;
+                font-size: 2.5rem;
+                cursor: pointer;
+            }
+            .menuIcon1{
+                // display: none;
+                display: flex;
+                font-size: 2.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,21 @@
+@import '../../global.scss';
+    li{
+        color: rgb(99, 28, 28);
+        margin: 1rem 1rem;
+        cursor: pointer;
+        font-size: 1.5rem;
+        text-transform: capitalize;
+
+        @include mobile{
+            font-size: 1rem;
+        }
+
+        &.active{
+            background-color: #0b0b0b;
+            color: rgb(179, 136, 136);
+            padding: 4px 8px;
+            border-radius: 10px;
+        }
+
+
+    }
